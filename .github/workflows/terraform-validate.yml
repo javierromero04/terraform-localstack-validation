@@ -16,7 +16,7 @@ jobs:
       - name: Configurar Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: 1.5.7
+          terraform_version: 1.11.3
 
       - name: Inicializar Terraform (sin backend)
         run: terraform init -backend=false
