@@ -11,3 +11,7 @@ provider "aws" {
   skip_credentials_validation = true
   skip_metadata_api_check     = true
 }
+
+resource "aws_s3_bucket" "example" {
+  bucket = "my-localstack-bucket"
+}
