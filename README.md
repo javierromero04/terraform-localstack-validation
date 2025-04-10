@@ -11,3 +11,4 @@ Este proyecto usa GitHub Actions para validar automáticamente el código Terraf
 # test 3
 # test 4
 Versión 1.0: bucket básico
+Versión 1.1: bucket mejorado
