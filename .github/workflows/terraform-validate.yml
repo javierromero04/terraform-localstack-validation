@@ -1,0 +1,25 @@
+name: Terraform Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.5.7
+
+      - name: Inicializar Terraform (sin backend)
+        run: terraform init -backend=false
+
+      - name: Validar configuración
+        run: terraform validate
